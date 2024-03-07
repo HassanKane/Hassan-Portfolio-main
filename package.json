@@ -1,0 +1,42 @@
+{
+  "homepage": "https://kanehassan.github.io/Hassan-portfolio/",
+  "name": "portfolio",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "@react-email/components": "^0.0.15",
+    "@react-email/tailwind": "^0.0.14",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.6",
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.0.1",
+    "react-intersection-observer": "^9.8.1",
+    "resend": "^3.2.0",
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.25",
+    "@types/react": "17.0.76",
+    "@types/react-dom": "^17.0.11",
+    "gh-pages": "^6.1.1",
+    "react-scripts": "^5.0.1",
+    "typescript": "4.9.5"
+  },
+  "main": "next.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
