@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
@@ -9,6 +8,20 @@ import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    const formData = new FormData(event.currentTarget);
+    const { error } = await sendEmail(formData);
+
+    if (error) {
+      toast.error(error);
+      return;
+    }
+
+    toast.success("Email sent successfully!");
+  };
 
   return (
     <motion.section
@@ -32,24 +45,15 @@ export default function Contact() {
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:hassanknmr@gmail.com">
-          hassanknmr@gmail.com
+        <a className="underline" href="mailto:hassanekane155@gmail.com">
+          hassanekane155@gmail.com
         </a>{" "}
         or through this form.
       </p>
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        {...async (formData: FormData) => {
-          const { error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully!");
-        }}
+        onSubmit={handleSubmit}
       >
         <input
           className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
@@ -66,6 +70,12 @@ export default function Contact() {
           required
           maxLength={5000}
         />
+        <button
+          type="submit"
+          className="bg-gray-900 text-white px-4 py-2 rounded-md mt-3 hover:bg-gray-800 transition-all"
+        >
+          Send
+        </button>
       </form>
     </motion.section>
   );

@@ -34,7 +34,8 @@ export const projectsData = [
       "Real Software-as-a-Service app with AI features and a payments and credits system.",
     tags: ["React", "Typescript", "Next.js", "Clerk", "Stripe"],
     imageUrl: imaginify,
-    projectUrl: "https://imaginify-eta-three.vercel.app/",
+    projectUrl: "https://imaginify-eta-three.vercel.app/sign-in",
+    codeUrl: "https://github.com/HassanKane/Imaginify",
   },
 
   {
@@ -44,6 +45,7 @@ export const projectsData = [
     tags: ["React", "Javascript", "Next.js", "Redux"],
     imageUrl: backroads,
     projectUrl: "https://hassankane.github.io/backroads-app/",
+    codeUrl: "https://github.com/HassanKane/backroads-app",
   },
   {
     title: "expenseT",
@@ -51,6 +53,7 @@ export const projectsData = [
     tags: ["React", "Express", "Node.js", "MongoDB", "Typescript"],
     imageUrl: expenseT,
     projectUrl: "https://pwa-expense-tracker-typescript-2cv2dquh1.vercel.app/",
+    codeUrl: "https://github.com/HassanKane/Expense-tracker",
   },
 ] as const;
 
