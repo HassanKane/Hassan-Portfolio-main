@@ -34,7 +34,7 @@ export const projectsData = [
       "Real Software-as-a-Service app with AI features and a payments and credits system.",
     tags: ["React", "Typescript", "Next.js", "Clerk", "Stripe"],
     imageUrl: imaginify,
-    projectUrl: "https://imaginify-eta-three.vercel.app/sign-in",
+    projectUrl: "https://imaginify-eta-three.vercel.app",
     codeUrl: "https://github.com/HassanKane/Imaginify",
   },
 
